@@ -62,10 +62,17 @@ table1 <- xtabs(~result + sex, data=kRdata)
 rowPerc(table1)
 colPerc(table1)
 ```
-when looking at the numbers 64 out of 100 males are dead while only 36 out of 100 feamles are dead. This shows males are more likely to die.
+when looking at the numbers 64 out of 100 males are dead while only 36 out of 100 females are dead. This shows males are more likely to die.
+
 ## Inferential results 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
+Men are dying to covid in much higher percentages than females.
 
 
 ## Conclusions
