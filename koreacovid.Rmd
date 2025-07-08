@@ -57,8 +57,12 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
   
 ## Numerical results
-
-
+```{r}
+table1 <- xtabs(~result + sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+when looking at the numbers 64 out of 100 males are dead while only 36 out of 100 feamles are dead. This shows males are more likely to die.
 ## Inferential results 
 
 
